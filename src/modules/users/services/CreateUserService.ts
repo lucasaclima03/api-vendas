@@ -22,6 +22,7 @@ class CreateUserService {
       password,
     });
     await usersRepository.save(user);
+
     return user;
   }
 }
