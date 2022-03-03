@@ -10,6 +10,7 @@ interface IRequest {
   email: string;
   password: string;
 }
+
 interface IResponse {
   user: User;
   token: string;
@@ -17,7 +18,7 @@ interface IResponse {
 
 class CreateSessionsService {
   public async execute({ email, password }: IRequest): Promise<IResponse> {
-    const usersRepository = await getCustomRepository(UsersRepository);
+    const usersRepository = getCustomRepository(UsersRepository);
     const user = await usersRepository.findByEmail(email);
     if (!user) {
       throw new AppError('Incorrect user/password', 401);
