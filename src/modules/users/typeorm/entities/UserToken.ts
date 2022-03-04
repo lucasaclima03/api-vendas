@@ -1,5 +1,6 @@
 import {
   Column,
+  CreateDateColumn,
   Entity,
   Generated,
   PrimaryGeneratedColumn,
@@ -17,6 +18,9 @@ class UserToken {
 
   @Column()
   user_id: string;
+
+  @CreateDateColumn()
+  created_at: Date;
 
   @UpdateDateColumn()
   updated_at: Date;
