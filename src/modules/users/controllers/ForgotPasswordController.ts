@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import SendForgotEmailService from '../services/SendForgotEmailService';
+import SendForgotEmailService from '../services/SendForgotPasswordEmailService';
 
 export default class ForgotPasswordController {
   public async create(request: Request, response: Response): Promise<Response> {
