@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import ShowProfileService from '../services/ShowProfileService';
 import UpdateProfileService from '../services/UpdateProfileService';
 
-export default class UsersController {
+export default class ProfileController {
   public async show(request: Request, response: Response): Promise<Response> {
     const showProfile = new ShowProfileService();
     const user_id = request.user.id;
