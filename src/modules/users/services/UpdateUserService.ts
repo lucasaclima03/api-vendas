@@ -20,7 +20,7 @@ class UpdateUserService {
 
     const emailExists = await usersRepository.findByEmail(email);
     if (emailExists) {
-      throw new AppError('This name is already used');
+      throw new AppError('This email is already used');
     }
 
     user.name = name;
